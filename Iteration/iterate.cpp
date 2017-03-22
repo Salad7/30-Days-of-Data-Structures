@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class iteratableInterface{
+class IteratableInterface{
     public:
     //Positions to the previous item
     virtual void previous();
@@ -14,10 +14,13 @@ class iteratableInterface{
     
     
 };
-
-class iteratable : public iteratableInterface{
+template <class T> class  Iterator : public IteratableInterface{
     
     
+    
+};
+class Iterable {
+    virtual Iterator iterator();
     
 };
 
