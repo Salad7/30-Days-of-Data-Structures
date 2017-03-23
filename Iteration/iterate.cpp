@@ -14,13 +14,15 @@ class IteratableInterface{
     
     
 };
-template <class T> class  Iterator : public IteratableInterface{
+class  Iterator : public IteratableInterface{
+  private:
+  int* container;  
+  
+  public:
+  Iterator(int* _ptrToArray){
     
+  }
     
-    
-};
-class Iterable {
-    virtual Iterator iterator();
     
 };
 
