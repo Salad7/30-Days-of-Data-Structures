@@ -2,35 +2,48 @@
 
 using namespace std;
 
-class Calculator {
-    private:
+
+class Operation {
+    protected:
         int firstNum;
         int secondNum;
     public:
-        int multiply(int a, int b);
-        int add(int a, int b);
-        int subtract(int a, int b);
-        int divide(int a, int b);
+        Operation(int,int);
+        virtual int applyOperation();
 };
-int Calculator::multiply(int a, int b){
-    return a*b;
+int Operation::applyOperation(){
+    return 0;
 }
-int Calculator::add(int a, int b){
-    return a+b;
+Operation::Operation(int a, int b){
+    firstNum = a;
+    secondNum = b;
 }
-int Calculator::subtract(int a, int b){
-    return a-b;
+
+class Multiply : public Operation {
+     private:
+        int a;
+        int b;
+     public:
+        Multiply(int c,int d);
+        int applyOperation();
+};
+Multiply::Multiply(int c, int d) : Operation(c,d){
+    a = c;
+    b = d;
+    
 }
-int Calculator::divide(int a, int b){
-    return a/b;
+int Multiply::applyOperation(){
+    return a * b;
+    
 }
+
 int main (){
-    Calculator c;
-    
-    cout << c.multiply(4,3) << endl;
-    cout << c.add(17,20) << endl;
-    cout << c.divide(3,4) << endl;
-    cout << c.subtract(45,30) << endl;
-    
+   Multiply m(8,1);
+   Operation* op;
+   op = &m;
+   
+   //cout << m.applyOperation(8,1) << endl;
+   //cout << op.applyOperation(4,3) << endl;
+  cout << op->applyOperation();
 }
 
