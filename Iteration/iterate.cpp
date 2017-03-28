@@ -60,7 +60,7 @@ class  Iterator{
 
 int main(){
     int foo[] = {1,2,3,4,5,9,3};
-    Iterator iterate(foo);
+    // Iterator iterate(foo);/////
     iterate.doubleArray();
    cout << endl << iterate.getSize() << endl;
     
