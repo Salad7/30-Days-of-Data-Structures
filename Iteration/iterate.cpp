@@ -63,7 +63,7 @@ int main(){
      Iterator iterate(foo);
     iterate.doubleArray();
    cout << endl << iterate.getSize() << endl;
-    cout << endl << iterate.first() << endl;
+   iterate.first();
     
 }
 
