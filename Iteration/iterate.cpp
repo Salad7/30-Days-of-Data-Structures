@@ -62,7 +62,6 @@ int main(){
     int foo[] = {1,2,3,4,5,9,3};
     Iterator iterate(foo);
     iterate.doubleArray();
-    //iteratre.deleteptr();
    cout << endl << iterate.getSize() << endl;
     
     
