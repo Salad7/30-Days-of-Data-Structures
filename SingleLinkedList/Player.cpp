@@ -5,7 +5,7 @@ using namespace std;
 class Player {
     private:
     std::string d;
-    *Player next;
+    Player* next;
     
     public:
     Player();
@@ -13,7 +13,7 @@ class Player {
     void setName(string* n);
     string getName();
     Player getNext();
-    void setNext(Player* next);
+    void setNext(Player* nextPlayer);
     
     
     
@@ -37,11 +37,11 @@ string Player::getName(){
     return d;
 }
 
-Player getNext::Player(){
+Player Player::getNext(){
     return *next;
 }
 
-void setNext(Player* nextPlayer){
+void Player::setNext(Player* nextPlayer){
     next = nextPlayer;
     
 }
