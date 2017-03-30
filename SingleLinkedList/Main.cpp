@@ -23,7 +23,6 @@ int main(){
     linkedList.addPlayer(&p);
     linkedList.addPlayer(&p2);
     linkedList.addPlayer(&p3);
-    // linkedList.addPlayer(&p);
 
     linkedList.printAll();
     

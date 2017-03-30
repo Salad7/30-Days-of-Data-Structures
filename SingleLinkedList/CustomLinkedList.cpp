@@ -25,35 +25,35 @@ void CustomLinkedList::addPlayer(Player* addP){
     if(size == 0){
         first = addP;
         last = addP;
-        size = 1;
+        cout << "size is 0 " << endl;
     }
     else if (size == 1){ 
         last = addP;
     first->setNext(last);
-    size = 2;
+            cout << "size is 1 " << endl;
+            cout << "last is xasxa";
+
     }
     else{
         Player* temp = first;
-        int tempS = 0;
-        while(tempS < size-1){
-            cout << "while tempS: " << tempS << " Is less then size-1 : " << size-1  << endl;
-         // temp = temp->getNext();
-          tempS++;  
-          
+        while(temp->next != nullptr){
+          temp = temp+sizeof(temp);
         }
+        cout << "temp is " << temp->getName();
         temp->setNext(addP);
         last = addP;
+        last->setNext(addP);
     }
+        
     size++;
+    
 }
 
 void CustomLinkedList::printAll(){
     Player* temp = first;
-    int start = 0;
-    while(start < size ){
+    while(temp->next != nullptr){
         std::cout << temp->getName() << std::endl;
-        *temp = *temp->getNext();
-        start++;
+        temp = temp+sizeof(temp);
     }
     
     
