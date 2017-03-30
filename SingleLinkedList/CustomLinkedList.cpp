@@ -25,31 +25,26 @@ void CustomLinkedList::addPlayer(Player* addP){
     if(size == 0){
         first = addP;
         last = addP;
+        size = 1;
     }
     else if (size == 1){ 
         last = addP;
     first->setNext(last);
-    
+    size = 2;
     }
     else{
         Player* temp = first;
         int tempS = 0;
         while(tempS < size-1){
-          *temp = temp->getNext();
+            cout << "while tempS: " << tempS << " Is less then size-1 : " << size-1  << endl;
+         // temp = temp->getNext();
           tempS++;  
+          
         }
         temp->setNext(addP);
         last = addP;
     }
-    //Create temp variable
-        //Player* temp = first;
-        
-        //Loop through until linked list until we find a node whose next is null
-        //while
-        
-        last->setNext(addP);
     size++;
-    
 }
 
 void CustomLinkedList::printAll(){
@@ -57,7 +52,7 @@ void CustomLinkedList::printAll(){
     int start = 0;
     while(start < size ){
         std::cout << temp->getName() << std::endl;
-        *temp = temp->getNext();
+        *temp = *temp->getNext();
         start++;
     }
     

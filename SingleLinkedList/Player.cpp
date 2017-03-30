@@ -12,7 +12,7 @@ class Player {
     Player(string n);
     void setName(string* n);
     string getName();
-    Player getNext();
+    Player* getNext();
     void setNext(Player* nextPlayer);
     
     
@@ -37,8 +37,8 @@ string Player::getName(){
     return d;
 }
 
-Player Player::getNext(){
-    return *next;
+Player* Player::getNext(){
+    return next;
 }
 
 void Player::setNext(Player* nextPlayer){

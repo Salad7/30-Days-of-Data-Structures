@@ -34,7 +34,7 @@ int main(){
     for(int i =0 ; i < 12; i++){
         cout << "i = " << i << "Address is " << &months[i] << endl;
     }
-    cout << strengthOfDay(&months[1],28,false);
+    cout << strengthOfDay(&months[3],30,false);
     
     
 }
