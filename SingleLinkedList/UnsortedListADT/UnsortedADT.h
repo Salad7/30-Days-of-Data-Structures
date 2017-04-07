@@ -1,12 +1,17 @@
-class ItemType {
-    enum RelationType{LESS,EQUAL,GREATER};
-    const int MAX_ITEMS = 10;
+#ifndef UNSORTEDADT_H
+#define UNSORTEDADT_H
+
+#include "ItemType.h"
+class UnsortedADT {
+    
+    
 private:
 int length;
-ItemType info[MAX_ITEMS];
-RelationType relationType;
 int currentPos;
-
+enum RelationType{LESS,EQUAL,GREATER};
+ //int MAX_ITEMS = 10;
+ ItemType info[10];
+RelationType relationType;
 
 public:
 UnsortedADT();
@@ -22,3 +27,5 @@ void getNextItem(ItemType &item);
 void printList(std::ofstream &dataFile);
 void createListFromFile(std::ifstream &dataFile, UnsortedADT &list);
 };
+
+#endif

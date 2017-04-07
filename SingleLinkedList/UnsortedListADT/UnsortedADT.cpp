@@ -1,4 +1,4 @@
-
+#include "ItemType.h"
 UnsortedADT::UnsortedADT(){
     length = 0;
     currentPos = 0;
@@ -11,9 +11,9 @@ void ItemType::makeEmpty(){
 
 bool UnsortedADT::isFull() const
 {
-    return (length == MAX_ITEMS);
+    return (length == 10);
 }
-void ItemType::printList(std::ofstream &dataFile, UnsortedADT list){
+void UnsortedADT::printList(std::ofstream &dataFile, UnsortedADT list){
     int length;
     ItemType item;
     list.resetList();
@@ -23,7 +23,7 @@ void ItemType::printList(std::ofstream &dataFile, UnsortedADT list){
         item.print(dataFile)
     }
     
-void ItemType::createListFromFile(std::ifstream &dataFile, UnsortedType &list){
+void UnsortedADT::createListFromFile(std::ifstream &dataFile, UnsortedType &list){
     
     ItemType item;
     list.makeEmpty();
@@ -70,4 +70,11 @@ void UnsortedADT::retrieveItem(ItemType& item, bool& found){
         
     
 }
+
+void UnsortedADT::InsertItem(ItemType item){
+    if(length < 10){
+        info[length] = item;
+        length++;
+        printf("found item");
+    }
 }
