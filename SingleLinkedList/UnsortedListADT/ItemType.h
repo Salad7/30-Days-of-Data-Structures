@@ -1,0 +1,7 @@
+class ItemType {
+public:
+
+
+private:
+
+};
