@@ -8,7 +8,7 @@ int main(){
     ItemType it;
     UnsortedADT adt;
     it.setName("mohamed");
-    adt.insertItem(it);
+    adt.insertItem(it);//
     
     
 }
