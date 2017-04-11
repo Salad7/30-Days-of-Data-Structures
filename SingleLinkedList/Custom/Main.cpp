@@ -16,8 +16,7 @@ int main(){
     p.setName(&test);
     p2.setName(&n);
     p3.setName(&lebron);
-    cout << p.getName();
-    //
+   // cout << p.getName();
     
     CustomLinkedList linkedList;
     linkedList.addPlayer(&p);
