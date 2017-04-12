@@ -25,6 +25,7 @@ int main(){
     linkedList.addPlayer(&p2);
     linkedList.addPlayer(&p3);
     linkedList.addPlayer(&p4);
+    linkedList.deleteNode(p4);
     linkedList.printAll();
     
 }   
