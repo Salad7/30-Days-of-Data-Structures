@@ -1,26 +1,25 @@
 #ifndef SHAPE_H
 #define SHAPE_H
+#include <string>
+#include <iostream>
 
-
-using namespace Shape
 using namespace std;
-public Shape(){
-    
-    
-}
 
-public string getName(){
-    return name
-}
-public void setName(string d){
-    name = d;
-}
-
-
-
-
-
+class Shape {
+private:
+int* xcoords;
+int* ycoords;
+string name ;
+public :
+Shape();
+void setName(string n);
+void setXcoords (int* xc);
+void setYcoords (int* yc);
+std::string getName();
+double getArea();
+double getPerimeter();
 
 
+};
 
 #endif
